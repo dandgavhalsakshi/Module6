@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Bell, Filter, X, Check, AlertCircle, Info, AlertTriangle, ChevronUp, ChevronDown, Moon, Sun, Loader } from 'lucide-react';
+import { Bell, Filter, X, Check, AlertCircle, Info, AlertTriangle, ChevronUp, ChevronDown, Moon, Sun, Loader, Settings} from 'lucide-react';
+
 
 // Define alert type interface
 interface Alert {
@@ -257,7 +258,6 @@ export default function SmartDashboard() {
   // Mark all alerts as read with animation
   const markAllAsRead = () => {
     // Highlight all unread notifications briefly
-    const unreadIds = alerts.filter(alert => !alert.read).map(alert => alert.id);
     setAlerts(prevAlerts => 
       prevAlerts.map(alert => ({ ...alert, highlighted: !alert.read }))
     );
@@ -570,6 +570,18 @@ export default function SmartDashboard() {
               )}
             </button>
             
+              {/*Settings button (newly added)*/}
+              <button
+              className="p-2 rounded-full button-click"
+              style={{
+                backgroundColor: darkMode ? 'rgba(247, 127, 0, 0.1)' : 'rgba(0, 95, 115, 0.1)',
+                color: currentTheme.primary
+              }}
+            >
+              <Settings size={20} />
+            </button>
+            
+
             {/* Theme toggle with animation */}
             <button
               onClick={toggleTheme}
