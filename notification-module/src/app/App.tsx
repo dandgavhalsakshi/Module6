@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import type { MountProps } from './types/index';
+import type { MountProps } from '../types/index';
 // import { Layout } from "@/app/Layout";
 // import { Home, NoMatch } from "@/pages";
-import PredictiveAlert from './components/PredictiveAlert';
-import  NotificationSettings from './components/NotificationSettingsForm'
+import PredictiveAlert from '../components/PredictiveAlert';
+import  NotificationSettings from '../components/NotificationSettingsForm'
 
-const App: React.FC<MountProps> = (props) => {
+const App: React.FC<MountProps> = () => {
   return (
     <>
       <Routes>
