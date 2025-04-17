@@ -12,12 +12,12 @@ interface SettingsStore {
   setError: (error: string | null) => void;
 }
 
-export const useSettingsStore = create<SettingsStore>((set) => ({
+export const useSettingsStore = create<SettingsStore>((set: (arg0: { settings?: any; isLoading?: any; error?: any; }) => any) => ({
   settings: null,
   isLoading: false,
   error: null,
 
-  setSettings: (settings) => set({ settings }),
-  setLoading: (loading) => set({ isLoading: loading }),
-  setError: (error) => set({ error }),
+  setSettings: (settings: any) => set({ settings }),
+  setLoading: (loading: any) => set({ isLoading: loading }),
+  setError: (error: any) => set({ error }),
 }));

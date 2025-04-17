@@ -28,20 +28,20 @@ export const useNotificationStore = create<NotificationStore>((set, get) => ({
   error: null,
   connectionStatus: 'disconnected',
 
-  setNotifications: (notifications) => {
+  setNotifications: (notifications: any) => {
     set({ notifications });
     get().calculateUnreadCount();
   },
 
-  addNotification: (notification) => {
-    set((state) => ({
+  addNotification: (notification: any) => {
+    set((state: { notifications: any; }) => ({
       notifications: [notification, ...state.notifications],
     }));
     get().calculateUnreadCount();
   },
 
-  markAsRead: (id) => {
-    set((state) => ({
+  markAsRead: (id: any) => {
+    set((state: { notifications: any[]; }) => ({
       notifications: state.notifications.map((n) =>
         n.id === id ? { ...n, read: true } : n
       ),
@@ -50,18 +50,18 @@ export const useNotificationStore = create<NotificationStore>((set, get) => ({
   },
 
   markAllAsRead: () => {
-    set((state) => ({
+    set((state: { notifications: any[]; }) => ({
       notifications: state.notifications.map((n) => ({ ...n, read: true })),
     }));
     get().calculateUnreadCount();
   },
 
-  setLoading: (loading) => set({ isLoading: loading }),
-  setError: (error) => set({ error }),
-  setConnectionStatus: (status) => set({ connectionStatus: status }),
+  setLoading: (loading: any) => set({ isLoading: loading }),
+  setError: (error: any) => set({ error }),
+  setConnectionStatus: (status: any) => set({ connectionStatus: status }),
 
   calculateUnreadCount: () => {
-    const count = get().notifications.filter((n) => !n.read).length;
+    const count = get().notifications.filter((n: { read: any; }) => !n.read).length;
     set({ unreadCount: count });
   },
 }));
