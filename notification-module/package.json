@@ -18,15 +18,16 @@
     "lucide-react": "^0.487.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@shared/ui-kit": "packages/ui-kit/src/index.ts",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
-    "@shared/ui-kit": "packages/ui-kit/src/index.ts",
     "autoprefixer": "^10.4.14",
     "daisyui": "^3.1.7",
     "eslint": "^8.38.0",
