@@ -1,19 +1,20 @@
-import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "@/app/Layout";
-import { Home, NoMatch } from "@/pages";
-import SmartDashboard from '../components/SmartDashboard';
+import type { MountProps } from '../types/index';
+// import { Layout } from "@/app/Layout";
+// import { Home, NoMatch } from "@/pages";
+import PredictiveAlert from '../components/PredictiveAlert';
+import  NotificationSettings from '../components/NotificationSettingsForm'
 
-const App: FC = () => {
+const App: React.FC<MountProps> = () => {
   return (
     <>
       <Routes>
         
-        <Route index element={<SmartDashboard />} />
-        
+        <Route index element={<PredictiveAlert />} />
+        <Route path="/settings" element={<NotificationSettings />} />
+
       </Routes>
     </>
   );
 };
-
 export default App;

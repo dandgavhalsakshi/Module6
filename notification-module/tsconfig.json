@@ -33,6 +33,6 @@
       "app/*": ["src/app/*"]
     }
   },
-  "include": ["src", "types/vite-env.d.ts", "types"],
+  "include": ["src", "src/types/vite-env.d.ts", "src/types"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
