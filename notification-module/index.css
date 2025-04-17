@@ -1,0 +1,81 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Montserrat:wght@800&family=Nunito&family=Lexend:wght@600&family=Inter:wght@600&family=Poppins:wght@500&family=Roboto:wght@500&family=Lato:wght@500&family=Bebas+Neue&family=Open+Sans&family=Lora&family=Playfair+Display:ital@1&family=Cormorant+Garamond:ital,wght@1,600&family=Source+Sans+Pro&display=swap');
+
+body {
+  font-family: 'Open Sans', 'Lora', sans-serif;
+  background-color: #f5f5f5;
+  margin: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.group-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  color: #222;
+}
+
+.quote {
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+.caption {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+select, input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-family: 'Open Sans', 'Lora', sans-serif;
+}
+
+.alert {
+  border-left: 5px solid;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.alert.info { border-color: #3498db; background-color: #ecf6fd; }
+.alert.warning { border-color: #f1c40f; background-color: #fffbea; }
+.alert.critical { border-color: #e74c3c; background-color: #fdecea; }
